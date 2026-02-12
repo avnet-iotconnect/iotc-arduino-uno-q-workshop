@@ -71,26 +71,26 @@ conjunction with an automated bash script. Follow these steps to complete the pr
 > Ensure that the template file saves as a `.json` file-type. Some browsers will default to a `.txt` file-type
 > which is not supported by the /IOTCONNECT template import feature.
 
-6. Back in the /IOTCONNECT browser tab, click on the "Create Template" button in the top-right of the screen.
+5. Back in the /IOTCONNECT browser tab, click on the "Create Template" button in the top-right of the screen.
 
-7. Click on the "Import" button in the top-right of the resulting screen.
+6. Click on the "Import" button in the top-right of the resulting screen.
 
-8. Select your downloaded copy of the template from sub-step 4 and then click "save".
+7. Select your downloaded copy of the template from sub-step 4 and then click "save".
 
-9. Click on the "Devices" tab of the blue toolbar at the bottom of the screen.
+8. Click on the "Devices" tab of the blue toolbar at the bottom of the screen.
 
-10. In the resulting page, click on the "Create Device" button in the top-right of the screen.
+9. In the resulting page, click on the "Create Device" button in the top-right of the screen.
 
-11. Customize the "Unique ID" and "Device Name" fields to your needs (both fields should be identical though).
+10. Customize the "Unique ID" and "Device Name" fields to your needs (both fields should be identical though).
 
-12. Select the most appropriate option for your device from the "Entity" dropdown (only for organization, does not
+11. Select the most appropriate option for your device from the "Entity" dropdown (only for organization, does not
     affect connectivity).
 
-13. Select "arduino-app-lab" from the "Template" dropdown.
+12. Select "arduino-app-lab" from the "Template" dropdown.
 
-14. In the resulting "Device Certificate" field, select "Use my certificate." Leave this page as-is for now, you will finish it later.
+13. In the resulting "Device Certificate" field, select "Use my certificate." Leave this page as-is for now, you will finish it later.
 
-15. Swapping over to the terminal of your Arduino, navigate to the `scripts` directory of the repo using this command:
+14. Swapping over to the terminal of your Arduino, navigate to the `scripts` directory of the repo using this command:
 
 ```
 cd /home/arduino/iotc-arduino-uno-q-workshop/scripts
