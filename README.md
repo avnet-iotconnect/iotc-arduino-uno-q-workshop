@@ -67,9 +67,9 @@ conjunction with an automated bash script. Follow these steps to complete the pr
 4. Right-click and then click "save link as" on [this link to the Arduino Uno Q App Lab device template](https://raw.githubusercontent.com/avnet-iotconnect/iotc-arduino-uno-q-workshop/refs/heads/main/app-configs/arduino-app-lab-template.json)
    to download the raw template file to your PC.
 
-   > [!IMPORTANT]
-   > Ensure that the template file saves as a `.json` file-type. Some browsers will default to a `.txt` file-type
-   > which is not supported by the /IOTCONNECT template import feature.
+> [!IMPORTANT]
+> Ensure that the template file saves as a `.json` file-type. Some browsers will default to a `.txt` file-type
+> which is not supported by the /IOTCONNECT template import feature.
 
 6. Back in the /IOTCONNECT browser tab, click on the "Create Template" button in the top-right of the screen.
 
