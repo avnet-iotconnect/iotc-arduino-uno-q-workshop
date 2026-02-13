@@ -139,14 +139,21 @@ sudo ./scripts/unoq_setup.sh --demo-dir /opt/demo
 ## 5. Choose a Lab Example, Clone It, and Copy the /IOTCONNECT Files
 
 In Arduino App Lab:
-1) Browse examples from `app-bricks-examples`.
-2) Copy the selected app into your workspace.
-3) Note the app folder path (example: `/home/arduino/ArduinoApps/air-quality-on-led-matrix`).
-4) Open the matching guide in `app-configs/<example>/README.md`.
-5) Copy the /IOTCONNECT-enabled python files from the workshop repo into the app:
+1) Browse the example applications after clicking "Examples" in the vertical toolbar on the left.
+2) Click on the example application you wish to utilize.
+3) Click on "Copy and edit app" in the top-right corner
+4) Name your copy of the app (ideally similar to the app names in this repo)
+5) Copy the /IOTCONNECT-enabled python files and relay client from the workshop repo into the app:
    ```bash
    cp /home/arduino/iotc-arduino-uno-q-workshop/app-configs/<example>/python/* /home/arduino/ArduinoApps/<app-folder>/python/
+   cp /home/arduino/demo/iotc_relay_client.py /home/arduino/ArduinoApps/<app-folder>/python/
    ```
+> [!TIP]
+> For example, if you were using the "blink" app and you had named your copy "my-blink-app", your commands would be:
+>   ```bash
+>   cp /home/arduino/iotc-arduino-uno-q-workshop/app-configs/blink/python/* /home/arduino/ArduinoApps/my-blink-app/python/
+>   cp /home/arduino/demo/iotc_relay_client.py /home/arduino/ArduinoApps/my-blink-app/python/
+>   ```
 
 ### Examples Index
 
