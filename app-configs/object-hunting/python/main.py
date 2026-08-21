@@ -6,6 +6,7 @@ from arduino.app_utils import App
 from arduino.app_bricks.web_ui import WebUI
 from arduino.app_bricks.video_objectdetection import VideoObjectDetection
 from datetime import datetime, UTC
+import base64
 import time
 import json
 
@@ -54,7 +55,27 @@ def on_relay_command(command_name, parameters):
 relay.command_callback = on_relay_command
 
 ui = WebUI()
-detection_stream = VideoObjectDetection(confidence=CURRENT_CONFIDENCE)
+detection_stream = VideoObjectDetection(confidence=CURRENT_CONFIDENCE, camera_preview=True)
+
+
+def send_camera_frame(frame: bytes):
+    if not frame:
+        return
+    ui.send_message("camera_frame", {
+        "image": "data:image/jpeg;base64," + base64.b64encode(frame).decode("utf-8"),
+        "timestamp": datetime.now(UTC).isoformat(),
+    })
+
+
+def top_confidence(value) -> float:
+    # VideoObjectDetection's on_detect_all payload maps each label to a *list*
+    # of {"confidence": ..., "bounding_box_xyxy": ...} dicts, not a single dict.
+    if isinstance(value, list):
+        confs = [v.get("confidence", 0.0) for v in value if isinstance(v, dict)]
+        return max(confs) if confs else 0.0
+    if isinstance(value, dict):
+        return float(value.get("confidence", 0.0))
+    return float(value or 0.0)
 
 ui.on_message("override_th", lambda sid, threshold: detection_stream.override_threshold(threshold))
 
@@ -95,7 +116,8 @@ def send_telemetry(detections):
     relay.send_telemetry(payload)
 
 
-def send_detections_to_ui(detections: dict):
+def send_detections_to_ui(detections: dict, frame: bytes = None):
+    send_camera_frame(frame)
     det_list = []
     for key, value in detections.items():
         entry = {
@@ -103,7 +125,7 @@ def send_detections_to_ui(detections: dict):
             "timestamp": datetime.now(UTC).isoformat()
         }
         ui.send_message("detection", message=entry)
-        det_list.append({"class_name": key, "confidence": float(value.get("confidence", 0))})
+        det_list.append({"class_name": key, "confidence": top_confidence(value)})
 
     send_telemetry(det_list)
 
