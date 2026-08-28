@@ -146,7 +146,7 @@
                                     "attributeGuid": "6AB66164-5FF1-484C-B15E-8114CBEF6D0B",
                                     "attributeName": "confidence",
                                     "displayName": "",
-                                    "checked": "false",
+                                    "checked": "true",
                                     "dataType": "DECIMAL",
                                     "attributeLatestValue": "0.15",
                                     "deviceUpdatedDate": "2026-02-16T22:05:13.040Z",
@@ -157,7 +157,7 @@
                                     "attributeGuid": "9A0065E8-B278-48D4-BB64-60ED1B3C6BBE",
                                     "attributeName": "confidence_1",
                                     "displayName": "",
-                                    "checked": "true",
+                                    "checked": "false",
                                     "dataType": "DECIMAL",
                                     "attributeLatestValue": "0.74609375",
                                     "deviceUpdatedDate": "2026-02-17T00:40:49.457Z",
@@ -1482,8 +1482,8 @@
                                     "attributeName": "class_name"
                                 },
                                 {
-                                    "attributeGuid": "avg_confidence",
-                                    "attributeName": "avg_confidence"
+                                    "attributeGuid": "confidence",
+                                    "attributeName": "confidence"
                                 },
                                 {
                                     "attributeGuid": "processing_time_ms",

@@ -1540,12 +1540,8 @@
                                     "attributeName": "mem_percent"
                                 },
                                 {
-                                    "attributeGuid": "max_confidence",
-                                    "attributeName": "max_confidence"
-                                },
-                                {
-                                    "attributeGuid": "UnoQdemo",
-                                    "attributeName": "UnoQdemo"
+                                    "attributeGuid": "status",
+                                    "attributeName": "status"
                                 }
                             ]
                         },
