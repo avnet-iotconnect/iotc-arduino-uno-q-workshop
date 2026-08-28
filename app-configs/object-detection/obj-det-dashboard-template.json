@@ -1092,7 +1092,7 @@
                                     "attributeGuid": "0542CFB1-285D-41FF-B775-494E411F71F0",
                                     "attributeName": "detection_count",
                                     "displayName": "",
-                                    "checked": "false",
+                                    "checked": "true",
                                     "dataType": "INTEGER",
                                     "attributeLatestValue": "1",
                                     "deviceUpdatedDate": "2026-02-16T20:24:01.050Z",
@@ -1388,8 +1388,8 @@
                             ]
                         },
                         "barAttr": {
-                            "barAttributeGuid": "7D1173F5-3E74-46F6-B5A6-2C2124AAF21A",
-                            "barAttributeName": "processing_time_ms",
+                            "barAttributeGuid": "0542CFB1-285D-41FF-B775-494E411F71F0",
+                            "barAttributeName": "detection_count",
                             "barAttributeColor": "#7ed321"
                         },
                         "barColor": "#00cc00",
